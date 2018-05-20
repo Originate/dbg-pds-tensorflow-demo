@@ -4,13 +4,13 @@
 
 We use neural networks applied to stock market data from the Deutsche Börse Public Dataset (PDS) to make predictions about future price movements for each stock.
 
-Specifically, we makr a prediction on the direction of the next minute's price change using information from the previous ten minutes. We use this to power a simplified trading strategy to show potential returns.
+Specifically, we make a prediction on the direction of the next minute's price change using information from the previous ten minutes. We use this to power a simplified trading strategy to show potential returns.
 
 This is intended as a demonstrate of the applications on this data set.
 
 ## The Deutsche Börse Public Dataset
 
-The Deutsche Börse PDS project provides minute-by-minute statistics over trading data from the XETRA and EUREX engines.
+The [Deutsche Börse PDS project](https://github.com/Deutsche-Boerse/dbg-pds) provides minute-by-minute statistics over trading data from the [XETRA](http://www.xetra.com/) and [EUREX](http://www.eurexchange.com/exchange-en/) engines.
 
 We focus on XETRA only. It is comprised of a variety of equities, funds and derivative securities. The PDS contains details for on a per security level, detailing trading activity by minute including the high, low, first and last prices within the time period.
 
