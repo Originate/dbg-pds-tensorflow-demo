@@ -24,7 +24,7 @@ Ensure you have Docker installed before completing the following steps.
 
 Additionally, you should run step 1 (`./build.sh`) after each pull where the Dockerfile has been updated to rebuild your local version against the latest update.
 
-## Notebooks
+## Project Structure
 
 The work here is divided across three notebooks:
 
