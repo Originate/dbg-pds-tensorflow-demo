@@ -1,4 +1,4 @@
-# Stock Price Movement Prediction Using The Deutsche Börse Public Dataset & Tensorflow
+# Stock Price Movement Prediction Using The Deutsche Börse Public Dataset & Machine Learning
 
 ## Introduction
 
@@ -23,6 +23,17 @@ Ensure you have Docker installed before completing the following steps.
 3. Start with the notebooks in order. Notebook 02- prepared the data for the other notebooks.
 
 Additionally, you should run step 1 (`./build.sh`) after each pull where the Dockerfile has been updated to rebuild your local version against the latest update.
+
+## Notebooks
+
+The work here is divided across three notebooks:
+
+- [Notebook 1: Obtain, Clean & Understand Data](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/01-data-cleaning-single-stock.ipynb)
+  - We obtain 1 day's worth of data to understand its structure and behaviour.
+- [Notebook 2: Create Test Dataset](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/02-load-multiple-days-and-prepare-ds.ipynb)
+  - Using the understanding from Notebook 1, we create the full test dataset.
+- [Notebook 3: Applying A Neural Network](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/03-stock-price-prediction-machine-learning.ipynb)
+  - We create and apply a neural network approach to the test dataset and the challenge of price movement prediction, and assess its performance.
 
 
 ## References
