@@ -36,6 +36,7 @@ The work here is divided across three notebooks:
   - We create and apply a neural network approach to the test dataset and the challenge of price movement prediction, and assess its performance.
 
 
-## References
+## Authors
 
-TBC
+- Rey Farhan (Originate)
+- Stefan Savev (Originate)
