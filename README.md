@@ -38,5 +38,5 @@ The work here is divided across three notebooks:
 
 ## Authors
 
-- Rey Farhan (Originate)
 - Stefan Savev (Originate)
+- Rey Farhan (Originate)
