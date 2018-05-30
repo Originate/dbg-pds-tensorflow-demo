@@ -35,6 +35,9 @@ The work here is divided across three notebooks:
 - [Notebook 3: Applying A Neural Network](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/03-stock-price-prediction-machine-learning.ipynb)
   - We create and apply a neural network approach to the test dataset and the challenge of price movement prediction, and assess its performance.
 
+## Documentation
+
+General project documentation can be found in the wiki [here](https://github.com/Originate/dbg-pds-tensorflow-demo/wiki).
 
 ## Authors
 
