@@ -37,13 +37,13 @@ The work here is divided across three notebooks:
 
 ## Additional notebooks
 - [What prices are predictable](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/what-prices-to-predict.ipynb) 
-  - We find out that it matters weather you predict and EndPrice, a MeanPrice or a MedianPrice in the next interval. We show how one can normalize the prices for better prediction.
+  - We find out that it matters weather you predict an EndPrice, a MeanPrice or a MedianPrice in the next interval. We show how one can normalize the prices to improve the prediction.
 - [Clustering Stocks](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/stock-clustering-via-price-correlations.ipynb) 
-  - We cluster 100 stocks from the dataset using the data from 60 days.
+  - We cluster 100 stocks from the dataset using data from 60 days.
 - [Simpler Linear Model](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/simple-linear-model.ipynb) 
-  - A well-performing linear model with hand-engineered features on a single stock.
-- [Large scale linear model predicting 20 minutes ahead](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/adapted-03-stock-price-prediction-machine-learning-20-minutes-intervals.ipynb) 
-  - We run the linear model on 50 most liquid stocks with proper training and test sets. We predict the direction of the average price in the next 20 minutes.
+  - We show a well-performing linear model with hand-engineered features on a single stock. We predict the average price of the next day for a single stock. This is intended to get started easily with the dataset and price modeling.
+- [Large-scale linear model predicting 20 minutes ahead](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/adapted-03-stock-price-prediction-machine-learning-20-minutes-intervals.ipynb) 
+  - We run a linear model on the 50 most liquid stocks with proper training and test sets. We predict the direction of the average price in the next 20 minutes.
 
 ## Documentation
 
