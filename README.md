@@ -35,6 +35,16 @@ The work here is divided across three notebooks:
 - [Notebook 3: Applying A Neural Network](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/03-stock-price-prediction-machine-learning.ipynb)
   - We create and apply a neural network approach to the test dataset and the challenge of price movement prediction, and assess its performance.
 
+## Additional notebooks
+- [What prices are predictable](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/what-prices-to-predict.ipynb) 
+  - We find out that it matters weather you predict and EndPrice, a MeanPrice or a MedianPrice in the next interval. We show how one can normalize the prices for better prediction.
+- [Clustering Stocks](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/stock-clustering-via-price-correlations.ipynb) 
+  - We cluster 100 stocks from the dataset using the data from 60 days.
+- [Simpler Linear Model](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/simple-linear-model.ipynb) 
+  - A well-performing linear model with hand-engineered features on a single stock.
+- [Large scale linear model predicting 20 minutes ahead](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/adapted-03-stock-price-prediction-machine-learning-20-minutes-intervals.ipynb) 
+  - We run the linear model on 50 most liquid stocks with proper training and test sets. We predict the direction of the average price in the next 20 minutes.
+
 ## Documentation
 
 General project documentation can be found in the wiki [here](https://github.com/Originate/dbg-pds-tensorflow-demo/wiki).
