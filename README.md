@@ -8,7 +8,7 @@ Specifically, we make a prediction on the direction of the next minute's price c
 
 This is intended as a demonstrate of the applications on this data set.
 
-## Follow us
+## Roadmap
 
 <table>
   <tr><td align="center">
@@ -16,15 +16,6 @@ This is intended as a demonstrate of the applications on this data set.
   <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
  </tr>
 </table>
-
- If you like what you are reading press the <a href="README.md">Star</a> button at the top of the page.
-  <a href="README.md">
-    <img  src="diagrams/star-btn-2.png" alt="Star Button" style="max-width:100%;">
-  </a>
-  You'll get notified of new demos as insights such as optimizing trading strategies, data transformation tips and many others.
-    
-
-
 
 ## The Deutsche Börse Public Dataset
 
@@ -63,6 +54,14 @@ The work here is divided across three notebooks:
 - [Large-scale linear model predicting 20 minutes ahead](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/adapted-03-stock-price-prediction-machine-learning-20-minutes-intervals.ipynb) 
   - We run a linear model on the 50 most liquid stocks with proper training and test sets. We predict the direction of the average price in the next 20 minutes.
 
+## Follow Us
+
+ If you like what you are reading press the <a href="README.md">Star</a> button at the top of the page.
+  <a href="README.md">
+    <img  src="diagrams/star-btn-2.png" alt="Star Button" style="max-width:100%;">
+  </a>
+  You'll get notified of new demos as insights such as optimizing trading strategies, data transformation tips and many others.
+  
 ## Documentation
 
 General project documentation can be found in the wiki [here](https://github.com/Originate/dbg-pds-tensorflow-demo/wiki).
