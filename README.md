@@ -10,25 +10,21 @@ This is intended as a demonstrate of the applications on this data set.
 
 ## Follow us
 
-
-
-
-<table><tr><td>
+<table>
   <tr><td align="center">
-    
-  If you like what you are reading and want to get notified of new demos as insights such as optimizing trading strategy, data transformation tips press the
-  <a href="README.md">
-    <img  src="diagrams/star-btn.png" alt="Star Button" style="max-width:100%;">
-  </a>
-    button at the top of the page.
-   
+    Curious about the plot below? Read what's coming in our <a href="ROADMAP.md">roadmap</a>.
   <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
  </tr>
 </table>
 
+ If you like what you are reading press the <a href="README.md">Star</a> button at the top of the page.
+  <a href="README.md">
+    <img  src="diagrams/star-btn-2.png" alt="Star Button" style="max-width:100%;">
+  </a>
+  You'll get notified of new demos as insights such as optimizing trading strategies, data transformation tips and many others.
+    
 
 
-Curious about the plot above? Read what's coming in our [roadmap](ROADMAP.md).
 
 ## The Deutsche Börse Public Dataset
 
