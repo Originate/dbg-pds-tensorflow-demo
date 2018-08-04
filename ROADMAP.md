@@ -111,7 +111,13 @@ There are a number of special situations in the stock market:
 - trade suspension during the day
 - weekends
 
+## Follow Us
 
+ If you like what you are reading press the <a href="README.md">Star</a> button at the top of the page.
+  <a href="ROADMAP.md">
+    <img  src="diagrams/star-btn-2.png" alt="Star Button" style="max-width:100%;">
+  </a>
+  You'll get notified of new demos as insights such as optimizing trading strategies, data transformation tips and many others.
 
 
 
