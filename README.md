@@ -39,8 +39,11 @@ The work here is divided across three notebooks:
 
 <table>
   <tr><td align="center">
-    Curious about the plot below? Read what's coming in our <a href="ROADMAP.md">roadmap</a>.
+ 
   <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
+  <br/>
+  Curious about the plot above? Get more details in our <a href="ROADMAP.md">roadmap</a>.
+     
  </tr>
 </table>
 
