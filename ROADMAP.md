@@ -24,7 +24,7 @@ We will address those issue be allowing the developed methods to work on [Quanto
 
 ## Domain-specific language for trading strategy specification
 
-```
+```python
 
 position = Position()
 s.add_position(position)
@@ -73,7 +73,7 @@ For example applying the strategy above to data for the stock 'RWE' on 2017-07-0
 As seen above the specification of the strategy depends on a number of constants. Those need to be tuned on actual data.
 We enable this by defining the constants as special type of variables that can be optimized by the back-tester.
 
-```
+```python
 gain_threshold = OptVariable(0.00001, 0.01)
 loss_threshold = OptVariable(0.00001, 0.01)
 # and in general replacing all majic constants by OptVariable with a range
