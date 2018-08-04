@@ -10,10 +10,12 @@ This is intended as a demonstrate of the applications on this data set.
 
 ## Follow us
 
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/Originate/dbg-pds-tensorflow-demo" data-icon="octicon-star" data-size="large" aria-label="Star Originate/dbg-pds-tensorflow-demo on GitHub">Star</a>
-
+<table><tr><td>
+<a class="github-button" href="https://github.com/Originate/dbg-pds-tensorflow-demo" data-icon="octicon-star" data-size="large" aria-label="Star Originate/dbg-pds-tensorflow-demo on GitHub">
+  <img src="diagrams/star-btn.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
+</a>
 the project on github to get notified of many new demos as insights such as optimizing trading strategy, data transformation tips and many others.
+</td></tr></table>
 
 ![Prediction & Strategy](diagrams/basic-strategy.png)
 
