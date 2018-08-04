@@ -10,17 +10,23 @@ This is intended as a demonstrate of the applications on this data set.
 
 ## Follow us
 
-<table><tr><td>
-  If you like what you are reading and want to get notified of new demos as insights such as optimizing trading strategy, data transformation tips press the star button at the top of the page.
-  </td>
- </tr>
-  <tr><td align="center">
-    <a href="README.md">
-  <img  src="diagrams/star-btn.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
-    </a></td>
- </tr></table>
 
-![Prediction & Strategy](diagrams/basic-strategy.png)
+
+
+<table><tr><td>
+  <tr><td align="center">
+    
+  If you like what you are reading and want to get notified of new demos as insights such as optimizing trading strategy, data transformation tips press the
+  <a href="README.md">
+    <img  src="diagrams/star-btn.png" alt="Star Button" style="max-width:100%;">
+  </a>
+    button at the top of the page.
+   
+  <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
+ </tr>
+</table>
+
+
 
 Curious about the plot above? Read what's coming in our [roadmap](ROADMAP.md).
 
