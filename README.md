@@ -1,7 +1,5 @@
 # Stock Price Movement Prediction Using The Deutsche Börse Public Dataset & Machine Learning
 
-![Prediction & Strategy](diagrams/basic-strategy.png)
-
 ## Introduction
 
 We use neural networks applied to stock market data from the Deutsche Börse Public Dataset (PDS) to make predictions about future price movements for each stock.
@@ -9,6 +7,12 @@ We use neural networks applied to stock market data from the Deutsche Börse Pub
 Specifically, we make a prediction on the direction of the next minute's price change using information from the previous ten minutes. We use this to power a simplified trading strategy to show potential returns.
 
 This is intended as a demonstrate of the applications on this data set.
+
+## Follow us
+
+Follow the project on github to get access to many insights such as machine learning for trading strategies
+
+![Prediction & Strategy](diagrams/basic-strategy.png)
 
 ## The Deutsche Börse Public Dataset
 
