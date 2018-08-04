@@ -5,6 +5,8 @@ After getting feedback about the project both internally at Originate and extern
 - stock market professionals are skeptical of how machine learning methods are applied to the stock market
 - stock market professionals want rigerous proof of performance in their terms, not just prediction accuracy
 
+Let us know what you would like to see by submitting a Github issue.
+
 # From Machine Learning to Strategy Learning
 
 To address the first issue we plan to develop trading strategies including such that are automatically tuned.
@@ -86,7 +88,7 @@ optimize the whole system, i.e. from the strategy to the machine learning method
 
 ## Domain-specific language for feature extraction and normalization
 
-```
+```python
 raw = SF.raw_signal('EndPrice')
 s5=raw.rolling_window(dir="past", steps=5, shift=0, NAs='Ignore').mean()
 s10=raw.rolling_window(dir="past", steps=10, shift=0, NAs='Ignore').mean()
