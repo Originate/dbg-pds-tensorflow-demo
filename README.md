@@ -8,15 +8,6 @@ Specifically, we make a prediction on the direction of the next minute's price c
 
 This is intended as a demonstrate of the applications on this data set.
 
-## Roadmap
-
-<table>
-  <tr><td align="center">
-    Curious about the plot below? Read what's coming in our <a href="ROADMAP.md">roadmap</a>.
-  <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
- </tr>
-</table>
-
 ## The Deutsche Börse Public Dataset
 
 The [Deutsche Börse PDS project](https://github.com/Deutsche-Boerse/dbg-pds) provides minute-by-minute statistics over trading data from the [XETRA](http://www.xetra.com/) and [EUREX](http://www.eurexchange.com/exchange-en/) engines.
@@ -43,6 +34,15 @@ The work here is divided across three notebooks:
   - Using the understanding from Notebook 1, we create the full test dataset.
 - [Notebook 3: Applying A Neural Network](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/03-stock-price-prediction-machine-learning.ipynb)
   - We create and apply a neural network approach to the test dataset and the challenge of price movement prediction, and assess its performance.
+
+## Not convinced? Check our Roadmap
+
+<table>
+  <tr><td align="center">
+    Curious about the plot below? Read what's coming in our <a href="ROADMAP.md">roadmap</a>.
+  <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
+ </tr>
+</table>
 
 ## Additional notebooks
 - [What prices are predictable](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/what-prices-to-predict.ipynb) 
