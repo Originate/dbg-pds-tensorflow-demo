@@ -11,11 +11,14 @@ This is intended as a demonstrate of the applications on this data set.
 ## Follow us
 
 <table><tr><td>
-<a class="github-button" href="https://github.com/Originate/dbg-pds-tensorflow-demo" data-icon="octicon-star" data-size="large" aria-label="Star Originate/dbg-pds-tensorflow-demo on GitHub">
-  <img src="diagrams/star-btn.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
-</a>
-the project on github to get notified of many new demos as insights such as optimizing trading strategy, data transformation tips and many others.
-</td></tr></table>
+  If you like what you are reading and want to get notified of new demos as insights such as optimizing trading strategy, data transformation tips press the star button at the top of the page.
+  </td>
+ </tr>
+  <tr><td align="center">
+    <a href="README.md">
+  <img  src="diagrams/star-btn.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
+    </a></td>
+ </tr></table>
 
 ![Prediction & Strategy](diagrams/basic-strategy.png)
 
