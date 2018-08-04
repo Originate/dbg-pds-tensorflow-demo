@@ -10,9 +10,11 @@ This is intended as a demonstrate of the applications on this data set.
 
 ## Follow us
 
-Follow the project on github to get access to many insights such as machine learning for trading strategies
+Follow the project on github to get access to many new demos as insights such as optimizing the trading strategy.
 
 ![Prediction & Strategy](diagrams/basic-strategy.png)
+
+Curious about the plot above? Read what's coming in our [roadmap](ROADMAP.md).
 
 ## The Deutsche Börse Public Dataset
 
