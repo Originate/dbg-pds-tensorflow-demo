@@ -8,9 +8,11 @@ Specifically, we make a prediction on the direction of the next minute's price c
 
 This is intended as a demonstrate of the applications on this data set.
 
-## Follow us
+## Follow Us
 
-Follow the project on github to get access to many new demos as insights such as optimizing the trading strategy.
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/Originate/dbg-pds-tensorflow-demo/subscription" data-icon="octicon-eye" aria-label="Watch Originate/dbg-pds-tensorflow-demo on GitHub">Watch</a>
+the project on github to get access to many new demos as insights such as optimizing trading strategy, data transformation tips and many others.
 
 ![Prediction & Strategy](diagrams/basic-strategy.png)
 
