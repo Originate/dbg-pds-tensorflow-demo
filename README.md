@@ -8,10 +8,10 @@ Specifically, we make a prediction on the direction of the next minute's price c
 
 This is intended as a demonstrate of the applications on this data set.
 
-## Follow Us
+## Follow us
 
 <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/Originate/dbg-pds-tensorflow-demo/subscription" data-icon="octicon-eye" aria-label="Watch Originate/dbg-pds-tensorflow-demo on GitHub">Watch</a>
+<a class="github-button" href="https://github.com/Originate/dbg-pds-tensorflow-demo" data-icon="octicon-star" data-size="large" aria-label="Star Originate/dbg-pds-tensorflow-demo on GitHub">Star</a>
 the project on github to get access to many new demos as insights such as optimizing trading strategy, data transformation tips and many others.
 
 ![Prediction & Strategy](diagrams/basic-strategy.png)
@@ -63,3 +63,7 @@ General project documentation can be found in the wiki [here](https://github.com
 
 - Stefan Savev (Originate)
 - Rey Farhan (Originate)
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
