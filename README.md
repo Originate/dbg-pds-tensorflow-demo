@@ -1,5 +1,18 @@
 # Stock Price Movement Prediction Using The Deutsche Börse Public Dataset & Machine Learning
 
+## News
+
+<table>
+  <tr><td align="center">
+  <a href="ROADMAP.md">
+  <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" width="60%;">
+   </a>
+  <br/>
+  We've published a <a href="ROADMAP.md">roadmap</a> that expands our work into strategy learning, not only prediction score learning.
+     
+ </tr>
+</table>
+
 ## Introduction
 
 We use neural networks applied to stock market data from the Deutsche Börse Public Dataset (PDS) to make predictions about future price movements for each stock.
@@ -35,17 +48,7 @@ The work here is divided across three notebooks:
 - [Notebook 3: Applying A Neural Network](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/03-stock-price-prediction-machine-learning.ipynb)
   - We create and apply a neural network approach to the test dataset and the challenge of price movement prediction, and assess its performance.
 
-## Not convinced? Check our Roadmap
 
-<table>
-  <tr><td align="center">
- 
-  <img src="diagrams/basic-strategy.png" alt="Prediction &amp; Strategy" style="max-width:100%;">
-  <br/>
-  Curious about the plot above? Get more details in our <a href="ROADMAP.md">roadmap</a>.
-     
- </tr>
-</table>
 
 ## Additional notebooks
 - [What prices are predictable](https://github.com/Originate/dbg-pds-tensorflow-demo/blob/master/notebooks/supporting/what-prices-to-predict.ipynb) 
