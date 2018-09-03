@@ -1,30 +1,33 @@
-# From Feedback to Roadmap
+# Roadmap
 
 After getting feedback about the project both internally at Originate and externally, we have found out that:
 
 - stock market professionals are skeptical of how machine learning methods are applied to the stock market
-- stock market professionals want rigerous proof of performance in their terms, not just prediction accuracy
-
-Let us know what you would like to see by submitting a Github issue.
+- stock market professionals want rigorous proof of performance in their terms, not just prediction accuracy
 
 # From Machine Learning to Strategy Learning
 
 To address the first issue we plan to develop trading strategies including such that are automatically tuned.
 We found out that while machine learning itself is applicable to stock price prediction, prediction alone is not enough.
 One needs to incorporate the machine learning prediction scores in a trading strategy. Often machine learning blogs 
-and academic papers related to stock prediction stop short of showing results via a back test, and thus the skeptisism.
+and academic papers related to stock prediction stop short of showing results via a backtest, and thus the skeptisism.
 
 # Demonstration on Quantopian
 
-While having access to minute-by-minute data enables offline exploration of various methods, those methods cannot be reliably tested
-offline. Professionals require rigerous proofs of algorithm performance via:
+While having access to minute-by-minute data enables offline exploration of various methods, those methods cannot be reliably tested offline. Professionals require rigorous proofs of algorithm performance via:
 
 - backtesting
 - paper testing
 
 We will address those issue be allowing the developed methods to work on [Quantopian](https://www.quantopian.com/).
+Models deployed on Quantopian can both the backtested and paper tested
+
+# Specifics
 
 ## Domain-specific language for trading strategy specification
+
+We will introduce a domain specific language for expressing trading strategies. Below you will find some examples illustrating our approach. Such domain specific languages are available in some trading platforms.
+Our domain specfic language is internal, i.e. it is a library in Python.
 
 ```python
 
@@ -88,19 +91,35 @@ optimize the whole system, i.e. from the strategy to the machine learning method
 
 ## Domain-specific language for feature extraction and normalization
 
+Our experience showed that dealing with timeseries, even when using Pandas, is error prone.
+In particular, with shifting operations, one might leak data from the predicted variables into the features.
+
+Our DSL will allow to execute code using Pandas. Our code will be mapped to
+- efficient column oriented representation with Pandas. This is useful for backtesting
+- efficient streaming representation, useful for online testing with streaming data. In this representation only incremental computations will be carried in.
+
 ```python
-raw = SF.raw_signal('EndPrice')
-s5=raw.rolling_window(dir="past", steps=5, shift=0, NAs='Ignore').mean()
-s10=raw.rolling_window(dir="past", steps=10, shift=0, NAs='Ignore').mean()
-s20=raw.rolling_window(dir="past", steps=20, shift=0, NAs='Ignore').mean()
-s30=raw.rolling_window(dir="past", steps=30, shift=0, NAs='Ignore').mean()
-s40=raw.rolling_window(dir="past", steps=40, shift=0, NAs='Ignore').mean()
-s60=raw.rolling_window(dir="past", steps=60, shift=0, NAs='Ignore').mean()
-s120=raw.rolling_window(dir="past", steps=120, shift=0, NAs='Ignore').mean()
+def rolling_price(feature_name, steps, shift):
+    return SF.raw_signal(feature_name). \
+           rolling_window(dir="past", steps=steps, shift=shift, NAs='Ignore')
 
-all=MF.feature_group([s5, s10, s20, s30, s40, s60, s120])
+def rolling_end_price(steps, shift):
+    return rolling_price('EndPrice', steps, shift)
 
-all_normalized=all.normalize_with(s30)
+def rolling_max_price(steps, shift):
+    return rolling_price('MaxPrice', steps, shift)
+
+def rolling_min_price(steps, shift):
+    return rolling_price('MinPrice', steps, shift)
+
+def future_mean_end_price(steps, shift):
+    return SF.raw_signal('EndPrice'). \
+           rolling_window(dir="future", steps=steps, shift=shift, NAs='Ignore'). \
+           mean()
+
+def direction_feature(steps, shift):
+    x = rolling_end_price(steps, shift)
+    return x.last().minus(x.first()).rename('D({}, {})'.format(steps, shift))
 ```
 
 ## Special situations
@@ -110,15 +129,4 @@ There are a number of special situations in the stock market:
 - end of day, start of day
 - trade suspension during the day
 - weekends
-
-## Follow Us
-
- If you like what you are reading press the <a href="README.md">Star</a> button at the top of the page.
-  <a href="ROADMAP.md">
-    <img  src="diagrams/star-btn-2.png" alt="Star Button" style="max-width:100%;">
-  </a>
-  You'll get notified of new demos as insights such as optimizing trading strategies, data transformation tips and many others.
-
-
-
 
