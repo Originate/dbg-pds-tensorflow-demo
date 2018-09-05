@@ -5,29 +5,34 @@ After getting feedback about the project both internally at Originate and extern
 - stock market professionals are skeptical of how machine learning methods are applied to the stock market
 - stock market professionals want rigorous proof of performance in their terms, not just prediction accuracy
 
-# From Machine Learning to Strategy Learning
+## Learning Strategies with Machine Learning
 
 To address the first issue we plan to develop trading strategies including such that are automatically tuned.
 We found out that while machine learning itself is applicable to stock price prediction, prediction alone is not enough.
 One needs to incorporate the machine learning prediction scores in a trading strategy. Often machine learning blogs 
 and academic papers related to stock prediction stop short of showing results via a backtest, and thus the skeptisism.
 
-# Demonstration on Quantopian
+## Demonstration on Quantopian
 
 While having access to minute-by-minute data enables offline exploration of various methods, those methods cannot be reliably tested offline. Professionals require rigorous proofs of algorithm performance via:
 
 - backtesting
-- paper testing
+- paper trading (simulated live trading without using real money)
 
 We will address those issue be allowing the developed methods to work on [Quantopian](https://www.quantopian.com/).
-Models deployed on Quantopian can both the backtested and paper tested
+Models deployed on Quantopian can be backtested and paper traded.
 
-# Specifics
+## More Examples
+
+We will introduce more examples. In particular, we will use some common indicators, such as RSI and moving averages cross-over. Those will be very useful for baseline. For machine learning methods, we will introduce decision trees and specialized
+Neural Network Architectures.
+
+# Implementation Specifics
 
 ## Domain-specific language for trading strategy specification
 
-We will introduce a domain specific language for expressing trading strategies. Below you will find some examples illustrating our approach. Such domain specific languages are available in some trading platforms.
-Our domain specfic language is internal, i.e. it is a library in Python.
+We will introduce a domain specific language for expressing trading strategies. Below you will find some examples illustrating our approach. Similar domain specific languages are available in some trading platforms.
+Our domain specfic language is an internal DSL, i.e. the code for the strategy is written at a high level in Python.
 
 ```python
 
@@ -76,7 +81,7 @@ For example applying the strategy above to data for the stock 'RWE' on 2017-07-0
 ## Optimization of strategies
 
 As seen above the specification of the strategy depends on a number of constants. Those need to be tuned on actual data.
-We enable this by defining the constants as special type of variables that can be optimized by the back-tester.
+We enable this by defining the constants as special type of variables that can be optimized by the backtester on a training dataset.
 
 ```python
 gain_threshold = OptVariable(0.00001, 0.01)
@@ -86,17 +91,18 @@ loss_threshold = OptVariable(0.00001, 0.01)
 
 In the example above, we had to manually derive the three variables `score`, but ideally this should be automated.
 
-A natural extension of the approach is the so called end-to-end architecture in machine learning, where we can attempt to 
+A natural extension of the approach is the so called end-to-end architecture in Machine Learning, where we can attempt to 
 optimize the whole system, i.e. from the strategy to the machine learning method to feature synthesis.
 
 ## Domain-specific language for feature extraction and normalization
 
-Our experience showed that dealing with timeseries, even when using Pandas, is error prone.
+Our experience showed that dealing with time series, even when using Pandas, is error prone.
 In particular, with shifting operations, one might leak data from the predicted variables into the features.
+Other difficulties arise in dealing with discontinuities such as beginning and end of days, weekends, holidays.
 
-Our DSL will allow to execute code using Pandas. Our code will be mapped to
-- efficient column oriented representation with Pandas. This is useful for backtesting
-- efficient streaming representation, useful for online testing with streaming data. In this representation only incremental computations will be carried in.
+Our code can be mapped to either
+- efficient column oriented representation with Pandas. This is useful for backtesting.
+- efficient streaming representation, useful for online testing with streaming data. In this representation only incremental computations will be carried out.
 
 ```python
 def rolling_price(feature_name, steps, shift):
@@ -117,10 +123,13 @@ def future_mean_end_price(steps, shift):
            rolling_window(dir="future", steps=steps, shift=shift, NAs='Ignore'). \
            mean()
 
-def direction_feature(steps, shift):
-    x = rolling_end_price(steps, shift)
-    return x.last().minus(x.first()).rename('D({}, {})'.format(steps, shift))
+def direction_feature(steps, offset):
+    x = rolling_end_price(steps, offset)
+    return x.last().minus(x.first()).rename('D({}, {})'.format(steps, offset))
 ```
+
+In the example above we define a direction feature which is the difference between the start and end price in some interval
+in the past, defined by the steps and offset parameters.
 
 ## Special situations
 
