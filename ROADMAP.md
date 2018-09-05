@@ -19,7 +19,7 @@ While having access to minute-by-minute data enables offline exploration of vari
 - backtesting
 - paper trading (simulated live trading without using real money)
 
-We will address those issue be allowing the developed methods to work on [Quantopian](https://www.quantopian.com/).
+We will address those issue by allowing the developed methods to work on [Quantopian](https://www.quantopian.com/).
 Models deployed on Quantopian can be backtested and paper traded.
 
 ## 3. More Examples
