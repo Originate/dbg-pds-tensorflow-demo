@@ -5,14 +5,14 @@ After getting feedback about the project both internally at Originate and extern
 - stock market professionals are skeptical of how machine learning methods are applied to the stock market
 - stock market professionals want rigorous proof of performance in their terms, not just prediction accuracy
 
-## Learning Strategies with Machine Learning
+## 1. Learning Strategies with Machine Learning
 
 To address the first issue we plan to develop trading strategies including such that are automatically tuned.
 We found out that while machine learning itself is applicable to stock price prediction, prediction alone is not enough.
 One needs to incorporate the machine learning prediction scores in a trading strategy. Often machine learning blogs 
 and academic papers related to stock prediction stop short of showing results via a backtest, and thus the skeptisism.
 
-## Demonstration on Quantopian
+## 2. Demonstration on Quantopian
 
 While having access to minute-by-minute data enables offline exploration of various methods, those methods cannot be reliably tested offline. Professionals require rigorous proofs of algorithm performance via:
 
@@ -22,7 +22,7 @@ While having access to minute-by-minute data enables offline exploration of vari
 We will address those issue be allowing the developed methods to work on [Quantopian](https://www.quantopian.com/).
 Models deployed on Quantopian can be backtested and paper traded.
 
-## More Examples
+## 3. More Examples
 
 We will introduce more examples. In particular, we will use some common indicators, such as RSI and moving averages cross-over. Those will be very useful for baseline. For machine learning methods, we will introduce decision trees and specialized
 Neural Network Architectures.
@@ -130,6 +130,10 @@ def direction_feature(steps, offset):
 
 In the example above we define a direction feature which is the difference between the start and end price in some interval
 in the past, defined by the steps and offset parameters.
+
+## Future Examples
+
+Future examples will be based on the DSL for strategies and feature engineering.
 
 ## Special situations
 
