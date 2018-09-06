@@ -144,3 +144,8 @@ There are a number of special situations in the stock market:
 - weekends
 
 Those situations pose challenges how to express machine learning features. For example, if you want your feature to be computed over the last two hours of trading, its one thing if those two hours are at the beginning of the day and in the middle of the day. We will create prediction expriments with a number of features to better understand the feature encoding issues.
+
+## Preliminary Results
+
+You can check [our preliminary results](/roadmap/Example.md) mostly to get an idea how we think about those problems.
+
