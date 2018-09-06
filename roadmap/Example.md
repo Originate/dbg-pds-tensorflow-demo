@@ -1,15 +1,22 @@
+# General Approach & Architecture
+
 As we said in the Roadmap, we want to carry out until we are able to show a successful strategy.
 
 It's a long way, but to ensure we make progress we start simply. We use a stage-wise architecture rather than an end-to-end.
 
 In the stagewise architecture, we develop the components separately and then we connect them together in a pipeline.
 In an end-to-end architecture, one can optimize all components simultaneously. In the stagewise architecture,
-each component is optimized without changing the parameters of other components.
+each component is optimized without changing the parameters of other components. In the long run, we will probably use
+an end-to-end architecture, but at the beginning this is too much. We follow a principle, where each successive model
+that we develop has to be slightly more powerful than the previous one. If one starts from the most advanced architecture,
+it will be very difficult to make sure it works optimally. If one starts by building a simpler architecture, the next slightly more complicated one will be accepted only if it outperforms the previous one. 
 
 There are two components that are strictly necessary:
 
 - Predictor
 - Strategy
+
+## Predictor
 
 The predictor takes as input the history of the time series returns a score. This score does not have to be up or down
 or buy or sell, but has to be able to help make a successful strategy. In the past, i.e. before machine learning,
@@ -19,6 +26,8 @@ ask a machine learning algorithm to make the best combination of them.
 
 The strategy will incorporate a number of our predictive scores. We will tune thresholds for the various scores
 and when certain conditions on the scores are satisfied, we will enter or exit a position.
+
+### What to optimize for (the y variable)
 
 The predictor has a number of parts itself. First, we need to decide what to optimize for. Here are some options:
 
@@ -31,31 +40,46 @@ The predictor has a number of parts itself. First, we need to decide what to opt
 - predict the difference between endprice (or some smoothed version of it) and the max/min price in the future for a limited horizon such as the end of day. Such statistic is useful
 for informing trading strategies. 
 
+### Features (the x's)
+
+#### Ideas for features
 The second part of the predictor is feature engineering. An idea about useful features can be derived by studing the intuition behind indicators and oscilators.
-If we use a linear model, we have to generate non linear features. Those features are useful to detect change of direction. The idea
-is that the stock market is cyclic. For example, the intuition behind the RSI indicator is that a stock will go up until overbought, then it will change trend.
+
+#### The importance of non-linear features
+If we use a linear model, we have to generate non linear features. Those features are useful to detect change of direction. The idea is that the stock market is cyclic. For example, the intuition behind the RSI indicator is that a stock will go up until overbought, then it will change trend.
 Similary, one statistic that we develop use the relationship between min, max and endprice. If endprice is close to the max price, we conlude the price
 will go up. However, if we continue in this way we would reach a singular point, where end price equal max price. At this point, the direction may need to change.
 There is a similar logic in some technical analysis where people draw lines and if they cross, its a special point.
 One way to acomplish non-linear features is via thresholding. Another option is to use a decision tree on top of linear features. 
 
+#### The importance of smoothing
+
+TODO
+
+#### History length and summarizing the long history
+
 Regarding feature engineering, one needs to decide about the length of the history we use for prediction. One could imaging using even days worth of history.
 This type of history could be useful, but needs to be appropriately summarized via summary statistics reflecting the distribution or change of distribution
 in the days before.
 
+#### Discontinuities
+
 Another point to be taken into account is discontinuities in the time series, such as between closing on the previous day and opening the next day. During
 such discontinuities new information could have entered the system change change the course of the stock. 
 
+### Other components
 
-Other components:
-- preprocessing
+Apart from prediction and strategies one needs
+
+- preprocessing transformations
 - evaluation
 - debugging support
 - testing and in particular making sure we don't leak information from the future into the past
+- architecture of the program
 
 # Example
 
-We give an example of such an architecture.
+We give an example of the general architecture.
 
 We try to predict the mean price two hours ahead. More speficially we predict
 
@@ -71,7 +95,6 @@ computed (m, m - 1, m -2 , ...) etc. minutes ahead.
 3. We make sure the features in 2. are either naturally normalized (centered at 0 and between -1 and 1), or we normalize them by dividing by a mean price in the past m minutes.
 4. We also compute shifted versions by 1, 2, ..., 10 minutes. 
 5. We make sure all the features are centered at 0 and between -1 and 1 by normalizing them via z-score normalization if necessary. For some features this may not be required.
-
 
 # Explanation of the results
 
