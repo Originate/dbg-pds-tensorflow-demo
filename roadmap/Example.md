@@ -56,6 +56,10 @@ One way to acomplish non-linear features is via thresholding. Another option is 
 
 TODO
 
+#### The importance of normalization
+
+TODO
+
 #### History length and summarizing the long history
 
 Regarding feature engineering, one needs to decide about the length of the history we use for prediction. One could imaging using even days worth of history.
