@@ -82,9 +82,24 @@ The idea is that the score will change from lower than 0.4 to higher than 0.4. T
 near the peak. So such calibration is very important. Is the non-linear nature of the stock price signal. If the price is too high, it might be too late to act. Of course, one should
 also consider the time horizon. That's why we have a prediction 2 hours in the future, 4 hours in the future and so on. In the future we could explore the differences between such predictors.
 
+## BAS
+
+ ![BAS/2017-07-13-BAS](/roadmap/results/BAS/2017-07-13-BAS-correct.png)
+ ![BAS/2017-07-13-BAS](/roadmap/results/BAS/2017-07-14-BAS-correct.png)
+
+
+## BMW
+
+ ![BAS/2017-07-13-BMW](/roadmap/results/BMW/2017-07-13-BMW-correct.png)
+ ![BAS/2017-07-13-BMW](/roadmap/results/BMW/2017-07-14-BMW-correct.png)
+
+## SAP
+
+ ![BAS/2017-07-13-SAP](/roadmap/results/SAP/2017-07-13-SAP-correct.png)
+ ![BAS/2017-07-13-SAP](/roadmap/results/SAP/2017-07-14-SAP-correct.png)
 
  
+## SIE
 
-
-
- 
+ ![SIE/2017-07-13-SAP](/roadmap/results/SIE/2017-07-13-SIE-correct.png)
+ ![SIE/2017-07-13-SAP](/roadmap/results/SIE/2017-07-14-SIE-correct.png)
