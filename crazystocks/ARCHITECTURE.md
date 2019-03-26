@@ -3,6 +3,7 @@
 The goal is to produce a small toolkit and library for evaluating stock market strategies based on predictive approaches.
 
 By predictive approaches, we mean machine learning on quantities related to the stock market.
+
 By stragegies, we mean simple rule based stragies which use the predictions of the machine learning models
 and may apply simple techniques as thresholding, stop-loss rules, and so on.
 
@@ -22,6 +23,8 @@ We don't aim to apply the most sophisticated modeling approaches at the intial s
 The focus is on robustness and usability of code.
 
 # Toolkit
+
+![Toolkit Architecture](toolkit.png)
 
 The toolkit will consist of the following commands
 
