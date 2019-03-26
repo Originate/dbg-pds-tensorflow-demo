@@ -24,7 +24,7 @@ The focus is on robustness and usability of code.
 
 # Toolkit
 
-![Toolkit Architecture](toolkit.png)
+![Toolkit Architecture](tool.png)
 
 The toolkit will consist of the following commands
 
